@@ -48,7 +48,7 @@ CWL_SYNTHESIZE_SINGLETON_FOR_CLASS(SHAuth)
     }
     else
     {
-        [NSKeyedArchiver archiveRootObject:user toFile:[self pathToFile]];
+        [[NSFileManager defaultManager] removeItemAtPath:[self pathToFile] error:nil];
         [[NSNotificationCenter defaultCenter] postNotificationName:SHAUTH_NOTIFICATION_SIGNEDOUT object:nil];
     }
 }

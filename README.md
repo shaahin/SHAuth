@@ -23,7 +23,7 @@ Now let's create a view controller which needs a user to be signed in first.
 
 You can use `self.shAuth` to access **SHAuth** object anytime. `self.shAuth.isAuthenticated` is a boolean value indicating if the user has been signed in or not. You may get the current signed in user anytime using `self.shAuth.user`.
 
-There's two global notifications in **SHAuth** which let your view controllers be notified at the moment the user signs in or out. so you may do some stuff needed on your views.
+There are two global notifications in **SHAuth** which let your view controllers be notified at the moment the user signs in or out. so you may do some stuff needed on your views.
 You can use it this way:
 		
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userSignedIn:) name:SHAUTH_NOTIFICATION_SIGNEDIN object:nil];
